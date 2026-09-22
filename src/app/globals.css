@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f3f6f1;
+  --foreground: #253128;
+  --surface: #ffffff;
+  --surface-muted: #e8eee5;
+  --border: #d2dccf;
+  --navy: #073f0d;
+  --navy-strong: #042d08;
+  --accent: #4f8d2f;
+  --accent-strong: #376a20;
+  --danger: #b42318;
+  --warning: #a15c07;
+  --success: #2f7838;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border: var(--border);
+  --color-navy: var(--navy);
+  --color-navy-strong: var(--navy-strong);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-danger: var(--danger);
+  --color-warning: var(--warning);
+  --color-success: var(--success);
+  --color-brand-50: #f3f8ef;
+  --color-brand-100: #dfedd5;
+  --color-brand-200: #c5dfb2;
+  --color-brand-300: #9fc97e;
+  --color-brand-400: #79ae52;
+  --color-brand-500: #5a9337;
+  --color-brand-600: #44772a;
+  --color-brand-700: #355d23;
+  --color-brand-800: #2c4b20;
+  --color-brand-900: #263f1d;
+  --color-brand-950: #11240d;
+  --color-slate-50: #f7f9f5;
+  --color-slate-100: #edf2ea;
+  --color-slate-200: #dde5d9;
+  --color-slate-300: #c8d3c3;
+  --color-slate-400: #91a08b;
+  --color-slate-500: #687564;
+  --color-slate-600: #505c4d;
+  --color-slate-700: #3b4739;
+  --color-slate-800: #293327;
+  --color-slate-900: #192218;
+  --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-mono:
+    "Geist Mono", "Geist Mono Fallback", ui-monospace, SFMono-Regular,
+    monospace;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  background: var(--background);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100dvh;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: #d8e9c9;
+  color: var(--navy-strong);
+}
+
+:focus-visible {
+  outline: 3px solid #79ae52;
+  outline-offset: 3px;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:not(:disabled),
+a {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.metric-number {
+  font-family:
+    "Geist Mono", "Geist Mono Fallback", ui-monospace, SFMono-Regular,
+    monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.surface-shadow {
+  box-shadow: 0 18px 60px -38px rgba(4, 45, 8, 0.48);
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+  }
+}
